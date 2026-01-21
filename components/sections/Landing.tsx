@@ -28,7 +28,7 @@ export function Landing({ onLanguageSelect, data, selectorData }: LandingProps) 
                     {data.welcome}
                 </h1>
                 <h1
-                    className="text-4xl md:text-6xl font-bold mb-12 text-gray-900 leading-tight"
+                    className="text-6xl md:text-8xl font-bold mb-12 text-gray-900 leading-tight"
                     style={{ fontFamily: "'Lateef', serif" }}
                 >
                     مرحباً دكتورة نورة
