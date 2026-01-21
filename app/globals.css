@@ -1,26 +1,82 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+    --color-primary: #0f172a;
+    --color-text-main: #334155;
+    --color-text-muted: #64748b;
+    --color-off-white: #fdfbf7;
+
+    --color-accent-teal: #2dd4bf;
+    --color-accent-coral: #fb7185;
+
+    --font-heading: var(--font-current-heading);
+    --font-body: var(--font-current-body);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@layer base {
+
+    /* Set defaults (LTR) */
+    body {
+        /* Initialize with English fonts (injected by Next.js into body) */
+        --font-current-heading: var(--font-heading);
+        --font-current-body: var(--font-body);
+
+        @apply bg-off-white text-text-main antialiased selection:bg-accent-teal/20;
+        font-family: var(--font-current-body), sans-serif;
+    }
+
+    /* RTL overrides - IBM Plex Sans Arabic for all body text */
+    :root[dir="rtl"] body {
+        --font-current-heading: var(--font-arabic-heading);
+        --font-current-body: var(--font-arabic-body);
+        font-family: var(--font-arabic-body), 'Alexandria', sans-serif;
+    }
+
+    /* Alexandria for all RTL text by default */
+    :root[dir="rtl"] * {
+        font-family: var(--font-arabic-body), 'Alexandria', sans-serif;
+    }
+
+    /* Lateef for all titles and big text in RTL - scaled up 30% */
+    :root[dir="rtl"] h1,
+    :root[dir="rtl"] h2,
+    :root[dir="rtl"] h3,
+    :root[dir="rtl"] h4,
+    :root[dir="rtl"] h5,
+    :root[dir="rtl"] h6,
+    :root[dir="rtl"] .font-heading,
+    :root[dir="rtl"] .text-3xl,
+    :root[dir="rtl"] .text-4xl,
+    :root[dir="rtl"] .text-5xl,
+    :root[dir="rtl"] .text-6xl,
+    :root[dir="rtl"] .text-7xl,
+    :root[dir="rtl"] .text-8xl,
+    :root[dir="rtl"] .text-9xl {
+        font-family: var(--font-arabic-heading), 'Lateef', serif !important;
+        font-size: 1.3em;
+        line-height: 1.2;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Utilities */
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Noise Overlay */
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
