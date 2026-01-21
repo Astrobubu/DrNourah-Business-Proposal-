@@ -23,7 +23,7 @@ export const translations = {
                 "Years of experience building shipping products",
             ],
             mufakkir: {
-                caption: "Mufakkir — AI-powered transcription using Whisper tech.",
+                caption: "ConstantLabs.ai — Our official studio site.",
             }
         },
         // Slide 2: What We Noticed
@@ -256,7 +256,7 @@ export const translations = {
                 "سنوات خبرة في بناء وإطلاق المنتجات",
             ],
             mufakkir: {
-                caption: "مفكر — تحويل صوتي بالذكاء الاصطناعي باستخدام تقنية Whisper.",
+                caption: "ConstantLabs.ai — موقعنا الرسمي المختص في بناء البرمجيات.",
             }
         },
         whatWeNoticed: {

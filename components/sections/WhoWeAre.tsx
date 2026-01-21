@@ -23,12 +23,12 @@ export function WhoWeAre({ data }: WhoWeAreProps) {
                 {/* Left: Branding & Visual */}
                 <div className="relative order-2 lg:order-1">
                     <div className="absolute -inset-4 bg-gradient-to-tr from-accent-teal/20 to-accent-coral/20 rounded-3xl blur-2xl transform rotate-2" />
-                    <a href="https://mufakkir.app" target="_blank" rel="noopener noreferrer" className="block">
+                    <a href="https://constantlabs.ai" target="_blank" rel="noopener noreferrer" className="block">
                         <GlassCard className="relative p-2 border-white/40 bg-white/50 backdrop-blur-xl overflow-hidden cursor-pointer hover:shadow-xl transition-shadow">
                             <div className="relative h-64 md:h-80 w-full rounded-xl overflow-hidden shadow-sm">
                                 <img
-                                    src="/mufakkir_preview.png"
-                                    alt="Mufakkir App Preview"
+                                    src="/constant_labs_preview.png"
+                                    alt="Constant Labs Preview"
                                     className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
