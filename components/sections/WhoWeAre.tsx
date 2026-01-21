@@ -46,13 +46,13 @@ export function WhoWeAre({ data }: WhoWeAreProps) {
                         <span>Constant Labs</span>
                     </a>
 
-                    <h2 className="text-5xl md:text-7xl font-bold leading-tight text-gray-900">
+                    <h2 className="text-5xl md:text-7xl font-bold leading-tight text-gray-900 font-heading">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-slate-600">
                             {data.title}
                         </span>
                     </h2>
 
-                    <h3 className="text-3xl text-accent-coral ">
+                    <h3 className="text-3xl text-accent-coral font-heading">
                         {data.subtitle}
                     </h3>
 

@@ -24,12 +24,12 @@ export function Landing({ onLanguageSelect, data, selectorData }: LandingProps) 
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="w-full max-w-5xl flex flex-col items-center"
             >
-                <h1 className="text-5xl md:text-7xl font-bold mb-4 text-gray-900 leading-tight">
+                <h1 className="text-5xl md:text-7xl font-bold mb-4 text-gray-900 leading-tight font-heading">
                     {data.welcome}
                 </h1>
                 <h1
-                    className="text-4xl md:text-6xl font-bold mb-12 text-gray-900 leading-tight"
-                    style={{ fontFamily: "'Lateef', serif" }}
+                    className="text-6xl md:text-8xl font-bold mb-12 text-gray-900 leading-tight"
+                    style={{ fontFamily: "var(--font-heading)" }}
                 >
                     مرحباً دكتورة نورة
                 </h1>

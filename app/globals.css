@@ -9,52 +9,28 @@
     --color-accent-teal: #2dd4bf;
     --color-accent-coral: #fb7185;
 
-    --font-heading: var(--font-current-heading);
-    --font-body: var(--font-current-body);
+    --font-heading: var(--font-heading);
+    --font-body: var(--font-body);
 }
 
 @layer base {
 
-    /* Set defaults (LTR) */
     body {
-        /* Initialize with English fonts (injected by Next.js into body) */
-        --font-current-heading: var(--font-heading);
-        --font-current-body: var(--font-body);
+        /* Body: Cairo */
+        font-family: var(--font-body), sans-serif;
 
         @apply bg-off-white text-text-main antialiased selection:bg-accent-teal/20;
-        font-family: var(--font-current-body), sans-serif;
     }
 
-    /* RTL overrides - IBM Plex Sans Arabic for all body text */
-    :root[dir="rtl"] body {
-        --font-current-heading: var(--font-arabic-heading);
-        --font-current-body: var(--font-arabic-body);
-        font-family: var(--font-arabic-body), 'Alexandria', sans-serif;
-    }
-
-    /* Alexandria for all RTL text by default */
-    :root[dir="rtl"] * {
-        font-family: var(--font-arabic-body), 'Alexandria', sans-serif;
-    }
-
-    /* Lateef for all titles and big text in RTL - scaled up 30% */
-    :root[dir="rtl"] h1,
-    :root[dir="rtl"] h2,
-    :root[dir="rtl"] h3,
-    :root[dir="rtl"] h4,
-    :root[dir="rtl"] h5,
-    :root[dir="rtl"] h6,
-    :root[dir="rtl"] .font-heading,
-    :root[dir="rtl"] .text-3xl,
-    :root[dir="rtl"] .text-4xl,
-    :root[dir="rtl"] .text-5xl,
-    :root[dir="rtl"] .text-6xl,
-    :root[dir="rtl"] .text-7xl,
-    :root[dir="rtl"] .text-8xl,
-    :root[dir="rtl"] .text-9xl {
-        font-family: var(--font-arabic-heading), 'Lateef', serif !important;
-        font-size: 1.3em;
-        line-height: 1.2;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .font-heading {
+        /* Headings: IBM Plex Sans Arabic */
+        font-family: var(--font-heading), sans-serif !important;
     }
 }
 

@@ -21,7 +21,7 @@ export function RevenueProjections({ data }: RevenueProjectionsProps) {
     return (
         <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 max-w-7xl mx-auto py-12">
             <div className="text-center mb-16">
-                <h2 className="text-5xl md:text-6xl font-bold mb-6">{data.title}</h2>
+                <h2 className="text-5xl md:text-6xl font-bold mb-6 font-heading">{data.title}</h2>
                 <p className="text-2xl text-text-muted max-w-3xl mx-auto">
                     {data.subtitle}
                 </p>

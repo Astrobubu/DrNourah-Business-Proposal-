@@ -35,9 +35,6 @@ export default function Home() {
         document.documentElement.dir = "rtl";
         document.documentElement.lang = "ar";
         document.body.classList.add("rtl");
-
-        // FORCE FONTS WITH JAVASCRIPT
-        forceArabicFonts();
       } else {
         document.documentElement.dir = "ltr";
         document.documentElement.lang = "en";
@@ -54,45 +51,9 @@ export default function Home() {
     setSlideIndex(1);
   };
 
-  // Force Arabic fonts via JavaScript
-  const forceArabicFonts = useCallback(() => {
-    const alexandria = "'Alexandria', sans-serif";
-    const lateef = "'Lateef', serif";
 
-    // Force Alexandria on body
-    document.body.style.fontFamily = alexandria;
 
-    // Force fonts on all elements
-    const allElements = document.querySelectorAll("*");
-    allElements.forEach((el) => {
-      const htmlEl = el as HTMLElement;
-      const computedStyle = window.getComputedStyle(el);
-      const fontSize = parseFloat(computedStyle.fontSize);
-      const tagName = el.tagName.toLowerCase();
 
-      // Lateef for headings and big text (24px+ = ~text-2xl and above)
-      if (
-        tagName === "h1" || tagName === "h2" || tagName === "h3" ||
-        tagName === "h4" || tagName === "h5" || tagName === "h6" ||
-        fontSize >= 24
-      ) {
-        htmlEl.style.fontFamily = lateef;
-      } else {
-        htmlEl.style.fontFamily = alexandria;
-      }
-    });
-  }, []);
-
-  // Re-apply fonts when slide changes (for Arabic)
-  useEffect(() => {
-    if (language === "ar") {
-      // Wait for slide animation to complete, then force fonts
-      const timer = setTimeout(() => {
-        forceArabicFonts();
-      }, 700);
-      return () => clearTimeout(timer);
-    }
-  }, [slideIndex, language, forceArabicFonts]);
 
   const t = language ? translations[language] : translations["en"];
 
@@ -114,7 +75,7 @@ export default function Home() {
   };
 
   const prevSlide = () => {
-    if (slideIndex > 1) setSlideIndex(slideIndex - 1);
+    if (slideIndex > 0) setSlideIndex(slideIndex - 1);
   };
 
   return (
@@ -205,7 +166,7 @@ export default function Home() {
         >
           {/* Back Button (Icon Only, Left) */}
           <div className="pointer-events-auto">
-            {slideIndex > 1 ? (
+            {slideIndex > 0 ? (
               <button
                 onClick={prevSlide}
                 className="bg-white/80 backdrop-blur text-text-main w-12 h-12 rounded-full shadow-lg hover:bg-white transition-all flex items-center justify-center border border-gray-200 group"

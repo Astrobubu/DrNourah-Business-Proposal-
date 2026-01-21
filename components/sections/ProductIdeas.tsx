@@ -44,7 +44,7 @@ export function ProductIdeas({ data }: ProductIdeasProps) {
     return (
         <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 max-w-7xl mx-auto py-12 relative">
             <div className="text-center mb-16">
-                <h2 className="text-5xl md:text-6xl font-bold mb-6">
+                <h2 className="text-5xl md:text-6xl font-bold mb-6 font-heading">
                     {data.title}
                 </h2>
                 <p className="text-2xl text-text-muted max-w-3xl mx-auto flex items-center justify-center gap-3">
@@ -56,7 +56,7 @@ export function ProductIdeas({ data }: ProductIdeasProps) {
             <div className="space-y-16 relative z-10 text-left rtl:text-right">
                 {data.categories.map((category, catIndex) => (
                     <div key={catIndex}>
-                        <h3 className="text-3xl font-bold mb-8 text-gray-800 rtl:text-4xl">{category.title}</h3>
+                        <h3 className="text-3xl font-bold mb-8 text-gray-800 rtl:text-4xl font-heading">{category.title}</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {category.items.map((product, itemIndex) => {
                                 const style = productStyles[(catIndex * 3 + itemIndex) % productStyles.length];
@@ -89,7 +89,7 @@ export function ProductIdeas({ data }: ProductIdeasProps) {
                                                     </span>
                                                 </div>
 
-                                                <h3 className="text-xl rtl:text-2xl font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors">{product.title}</h3>
+                                                <h3 className="text-xl rtl:text-2xl font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors font-heading">{product.title}</h3>
                                                 <p className="text-text-muted text-sm rtl:text-base flex-grow leading-relaxed mb-6">
                                                     {product.desc}
                                                 </p>
@@ -151,7 +151,7 @@ export function ProductIdeas({ data }: ProductIdeasProps) {
                                                 <span className={`text-sm font-bold uppercase tracking-wider ${style.color} mb-1 block`}>
                                                     {product.tag}
                                                 </span>
-                                                <h3 className="text-3xl rtl:text-4xl font-bold text-gray-900">{product.title}</h3>
+                                                <h3 className="text-3xl rtl:text-4xl font-bold text-gray-900 font-heading">{product.title}</h3>
                                             </div>
                                         </div>
 

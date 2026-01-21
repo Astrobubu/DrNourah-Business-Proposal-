@@ -23,7 +23,7 @@ export function LanguageSelector({ onSelect, className, data }: LanguageSelector
                 className="group relative overflow-hidden rounded-3xl bg-white/80 border border-gray-100 p-12 text-left shadow-lg transition-all hover:bg-white hover:shadow-xl hover:border-primary/20 cursor-pointer flex flex-col items-center justify-center gap-4 h-[300px]"
             >
                 <span className="text-xl text-text-muted font-medium uppercase tracking-widest">Select Language</span>
-                <span className="text-6xl font-bold font-heading text-primary group-hover:scale-110 transition-transform duration-500">English</span>
+                <span className="text-5xl font-bold font-heading text-primary group-hover:scale-110 transition-transform duration-500">English</span>
                 <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             </motion.button>
 
@@ -34,17 +34,17 @@ export function LanguageSelector({ onSelect, className, data }: LanguageSelector
                 onClick={() => onSelect("ar")}
                 className="group relative overflow-hidden rounded-3xl bg-white/80 border border-gray-100 p-12 text-right shadow-lg transition-all hover:bg-white hover:shadow-xl hover:border-secondary/20 cursor-pointer flex flex-col items-center justify-center gap-4 h-[300px]"
                 dir="rtl"
-                style={{ fontFamily: "'Alexandria', sans-serif" }}
+                style={{ fontFamily: "var(--font-body)" }}
             >
                 <span
                     className="text-xl text-text-muted font-medium"
-                    style={{ fontFamily: "'Alexandria', sans-serif" }}
+                    style={{ fontFamily: "var(--font-body)" }}
                 >
                     اختر اللغة
                 </span>
                 <span
                     className="text-6xl font-bold text-secondary group-hover:scale-110 transition-transform duration-500"
-                    style={{ fontFamily: "'Lateef', serif" }}
+                    style={{ fontFamily: "var(--font-heading)" }}
                 >
                     العربية
                 </span>

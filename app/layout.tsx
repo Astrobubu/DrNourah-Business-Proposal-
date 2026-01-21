@@ -1,29 +1,17 @@
 import type { Metadata } from "next";
-import { Rufina, Plus_Jakarta_Sans, Lateef, Alexandria } from "next/font/google";
+import { Cairo, IBM_Plex_Sans_Arabic } from "next/font/google";
 import "./globals.css";
 
-const rufina = Rufina({
-  subsets: ["latin"],
-  weight: ["400", "700"],
+const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
+  subsets: ["arabic", "latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
   variable: "--font-heading",
 });
 
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const cairo = Cairo({
+  subsets: ["arabic", "latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-body",
-});
-
-const lateef = Lateef({
-  subsets: ["arabic", "latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-arabic-heading",
-});
-
-const alexandria = Alexandria({
-  subsets: ["arabic", "latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-arabic-body",
 });
 
 export const metadata: Metadata = {
@@ -39,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${rufina.variable} ${jakarta.variable} ${lateef.variable} ${alexandria.variable} antialiased font-body bg-off-white text-gray-900`}
+        className={`${ibmPlexSansArabic.variable} ${cairo.variable} antialiased font-body bg-off-white text-gray-900`}
       >
         {children}
       </body>

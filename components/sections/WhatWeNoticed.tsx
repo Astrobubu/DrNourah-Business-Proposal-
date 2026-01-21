@@ -25,7 +25,7 @@ export function WhatWeNoticed({ data }: WhatWeNoticedProps) {
                 <Search className="w-10 h-10" />
             </motion.div>
 
-            <h2 className="text-5xl md:text-7xl font-bold mb-10 text-gray-900">
+            <h2 className="text-5xl md:text-7xl font-bold mb-10 text-gray-900 font-heading">
                 {data.title}
             </h2>
 
