@@ -39,7 +39,7 @@ export function PartnershipModel({ data }: PartnershipModelProps) {
                 {/* Right Side: Content */}
                 <div className="space-y-8 order-1 lg:order-2">
                     <div>
-                        <h2 className="text-4xl md:text-6xl font-bold mb-2 opacity-60">
+                        <h2 className="text-4xl md:text-6xl font-bold mb-2 opacity-60 font-heading">
                             {data.header1}
                         </h2>
                         <h3 className="text-5xl md:text-7xl text-accent-teal font-heading  leading-tight">
@@ -53,7 +53,7 @@ export function PartnershipModel({ data }: PartnershipModelProps) {
 
                     <div className="grid grid-cols-2 gap-8 pt-4">
                         <div>
-                            <h4 className="font-bold text-gray-900 mb-3 border-b text-2xl border-gray-200 pb-2">{data.weHandleLabel}</h4>
+                            <h4 className="font-bold text-gray-900 mb-3 border-b text-2xl border-gray-200 pb-2 font-heading">{data.weHandleLabel}</h4>
                             <ul className="space-y-2">
                                 {data.weHandle.map((item, i) => (
                                     <li key={i} className="text-text-muted text-sm flex items-center gap-2">
@@ -63,7 +63,7 @@ export function PartnershipModel({ data }: PartnershipModelProps) {
                             </ul>
                         </div>
                         <div>
-                            <h4 className="font-bold text-gray-900 mb-3 border-b text-2xl border-gray-200 pb-2">{data.youHandleLabel}</h4>
+                            <h4 className="font-bold text-gray-900 mb-3 border-b text-2xl border-gray-200 pb-2 font-heading">{data.youHandleLabel}</h4>
                             <ul className="space-y-2">
                                 {data.youHandle.map((item, i) => (
                                     <li key={i} className="text-text-muted text-sm flex items-center gap-2">

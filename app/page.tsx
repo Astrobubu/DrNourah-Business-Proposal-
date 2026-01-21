@@ -96,61 +96,61 @@ export default function Home() {
           )}
 
           {slideIndex === 1 && (
-            <motion.div key="slide-1" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar">
+            <motion.div key="slide-1" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar pb-32">
               <WhoWeAre data={t.whoWeAre} />
             </motion.div>
           )}
 
           {slideIndex === 2 && (
-            <motion.div key="slide-2" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar">
+            <motion.div key="slide-2" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar pb-32">
               <WhatWeNoticed data={t.whatWeNoticed} />
             </motion.div>
           )}
 
           {slideIndex === 3 && (
-            <motion.div key="slide-3" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar">
+            <motion.div key="slide-3" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar pb-32">
               <WhyCreatorsDontMonetize data={t.roadblocks} />
             </motion.div>
           )}
 
           {slideIndex === 4 && (
-            <motion.div key="slide-4" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar">
+            <motion.div key="slide-4" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar pb-32">
               <PartnershipModel data={t.partnership} />
             </motion.div>
           )}
 
           {slideIndex === 5 && (
-            <motion.div key="slide-5" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar">
+            <motion.div key="slide-5" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar pb-32">
               <ProductIdeas data={t.productIdeas} />
             </motion.div>
           )}
 
           {slideIndex === 6 && (
-            <motion.div key="slide-6" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar">
+            <motion.div key="slide-6" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar pb-32">
               <ValidationSystem data={t.validation} />
             </motion.div>
           )}
 
           {slideIndex === 7 && (
-            <motion.div key="slide-7" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar">
+            <motion.div key="slide-7" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar pb-32">
               <BuildProcess data={t.process} />
             </motion.div>
           )}
 
           {slideIndex === 8 && (
-            <motion.div key="slide-8" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar">
+            <motion.div key="slide-8" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar pb-32">
               <RevenueProjections data={t.projections} />
             </motion.div>
           )}
 
           {slideIndex === 9 && (
-            <motion.div key="slide-9" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar">
+            <motion.div key="slide-9" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar pb-32">
               <WhyThisWorksLongTerm data={t.longTerm} />
             </motion.div>
           )}
 
           {slideIndex === 10 && (
-            <motion.div key="slide-10" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar">
+            <motion.div key="slide-10" initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={{ duration: 0.6 }} className="absolute inset-0 overflow-y-auto no-scrollbar pb-32">
               <NextSteps data={t.nextSteps} />
             </motion.div>
           )}

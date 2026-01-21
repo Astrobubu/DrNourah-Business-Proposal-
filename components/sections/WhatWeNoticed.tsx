@@ -15,17 +15,17 @@ interface WhatWeNoticedProps {
 
 export function WhatWeNoticed({ data }: WhatWeNoticedProps) {
     return (
-        <section className="min-h-screen flex flex-col justify-center items-center px-6 md:px-12 max-w-4xl mx-auto py-20 text-center">
+        <section className="min-h-screen flex flex-col justify-center items-center px-6 md:px-12 max-w-4xl mx-auto py-12 md:py-20 text-center">
             <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.6 }}
-                className="w-20 h-20 bg-accent-coral/10 rounded-full flex items-center justify-center text-accent-coral mb-8"
+                className="w-20 h-20 bg-accent-coral/10 rounded-full flex items-center justify-center text-accent-coral mb-6 md:mb-8"
             >
                 <Search className="w-10 h-10" />
             </motion.div>
 
-            <h2 className="text-5xl md:text-7xl font-bold mb-10 text-gray-900 font-heading">
+            <h2 className="text-3xl md:text-7xl font-bold mb-8 md:mb-10 text-gray-900 font-heading">
                 {data.title}
             </h2>
 

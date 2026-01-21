@@ -20,7 +20,7 @@ export function ValidationSystem({ data }: ValidationSystemProps) {
     return (
         <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 max-w-5xl mx-auto py-12">
             <div className="text-center mb-16">
-                <h2 className="text-5xl md:text-6xl font-bold mb-6">
+                <h2 className="text-5xl md:text-6xl font-bold mb-6 font-heading">
                     {data.title}
                 </h2>
                 <p className="text-2xl text-text-muted">
@@ -40,7 +40,7 @@ export function ValidationSystem({ data }: ValidationSystemProps) {
                                 </div>
                             </div>
 
-                            <h3 className="text-2xl rtl:text-3xl font-bold mb-3">{step.title}</h3>
+                            <h3 className="text-2xl rtl:text-3xl font-bold mb-3 font-heading">{step.title}</h3>
                             <p className="text-lg text-text-muted leading-relaxed max-w-sm">
                                 {step.desc}
                             </p>

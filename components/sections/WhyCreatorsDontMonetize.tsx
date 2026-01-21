@@ -23,7 +23,7 @@ export function WhyCreatorsDontMonetize({ data }: WhyCreatorsDontMonetizeProps) 
     return (
         <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 max-w-7xl mx-auto py-20">
             <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">
+                <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight font-heading">
                     {data.title}
                 </h2>
                 <p className="text-xl text-text-muted max-w-2xl mx-auto">
@@ -39,7 +39,7 @@ export function WhyCreatorsDontMonetize({ data }: WhyCreatorsDontMonetizeProps) 
                             <div className={`w-12 h-12 rounded-xl ${bgs[i]} flex items-center justify-center mb-6`}>
                                 <Icon className={`w-6 h-6 ${colors[i]}`} />
                             </div>
-                            <h3 className="text-2xl rtl:text-4xl font-bold mb-3 text-gray-900">{card.title}</h3>
+                            <h3 className="text-2xl rtl:text-4xl font-bold mb-3 text-gray-900 font-heading">{card.title}</h3>
                             <p className="text-lg text-text-muted leading-relaxed">
                                 {card.text}
                             </p>
